@@ -74,21 +74,35 @@ And \\
     $p'$ =  the estimated proportion of successes or point estimate for $p$
     \end{block}
 \end{frame}
+
+\begin{frame}{Youth percentile or Z score}
+    \begin{block}{Z-score}
+       Z-score indicates how much a given value differs from the
+    standard deviation. The Z-score, or standard score, is the number of standard deviations a given data point lies above or below mean.
+    \begin{align}
+        \implies Z_u = \frac{x-\mu}{\sigma} = \frac{p-p'}{\sigma}
+    \end{align}
+     Where,\\
+        $Z_u$ = Normal (Youth) percentile or $Z$ score\\
+        $ x $ = Observed value\\
+        $\sigma_{p'} $ = Standard deviation
+        
+    \end{block}
+\end{frame}
 \begin{frame}{}
      \begin{block}{Confidence interval for a population proportion}
         The confidence interval for a population proportion $(p)$
         \begin{align}
-            p &= p'\times Z_u\times \sigma_{p'}
+        | p-p' | \leq \sigma Z_u\\
+        p'-\sigma Z_u \leq p \leq p'+\sigma Z_u
         \end{align}
-    Where,\\
-        $Z_u$ = Normal (Youth) percentile or $Z$ score\\
-        $\sigma_{p'} $ = Standard deviation
+        Where
         \begin{align}
             \sigma_{p'} &= \sqrt{\frac{(1-p')(p')}{n}}
         \end{align}
     Therefore,
         \begin{align}
-            p &= p'\times Z_u \times \sqrt{\frac{(1-p')(p')}{n}}\label{4}
+           p' - Z_u \times \sqrt{\frac{(1-p')(p')}{n}} \leq p \leq p' + Z_u \times \sqrt{\frac{(1-p')(p')}{n}}\label{4}
         \end{align}
     \end{block}
 \end{frame}
@@ -96,7 +110,8 @@ And \\
 \begin{frame}{Solution}
     Given,\\
     \begin{align}
-        \frac{p}{p'} &\leq 0.02 \label{5}\\
+        p &\leq \pm 0.02 \text{ of }p'\\
+        \implies |p-p'| &\leq 0.02\label{5} \text{ and, }\\
        \text{Confidence Coefficient } (CF) &= 0.95
         \implies Z_u = 2 \label{6}
     \end{align}
